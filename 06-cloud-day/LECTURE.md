@@ -12,7 +12,7 @@ Deploy your pipeline to the cloud! Today you'll integrate with S3, containerize 
 
 ### Data Flow
 ```
-PostgreSQL ⚡ Go Service ⚡ Bufstream ⚡ S3
+SQLite ⚡ Go Service ⚡ Bufstream ⚡ S3
      ⚡           ⚡          ⚡       ⚡
   Metrics    Traces     Events   Analytics
 ```

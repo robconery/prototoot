@@ -25,7 +25,7 @@ This workshop uses deliberate obstacles to deepen understanding. Some examples c
 4. Document your journey
 
 ## 🏢 The Chinook Story
-You're the new data architect at Chinook, a growing company that needs to move customer data from their Postgres database to S3 for analytics. Your mission: build a bulletproof data pipeline using modern tools! 
+You're the new data architect at Chinook, a growing company that needs to move customer data from their SQLite database to S3 for analytics. Your mission: build a bulletproof data pipeline using modern tools! 
 
 ## 📅 Your 7-Day Adventure
 
@@ -54,7 +54,7 @@ You're the new data architect at Chinook, a growing company that needs to move c
 - **Pitfall Focus**: Pointer vs value receivers and nil panics
 
 ### Day 4: 🔌 "Connection Day" - Database Integration
-**Topic**: Postgres + Go + Protobuf Integration
+**Topic**: SQLite + Go + Protobuf Integration
 - Database connection patterns
 - Scanning rows into protobuf messages
 - Transaction handling idioms
@@ -116,7 +116,7 @@ You're the new data architect at Chinook, a growing company that needs to move c
 
 ## 🏆 Final Project
 By day 7, you'll have built a complete, production-ready data pipeline that:
-- ✅ Reads customer data from Postgres
+- ✅ Reads customer data from SQLite
 - ✅ Converts to protobuf messages
 - ✅ Streams through Bufstream
 - ✅ Lands in S3 as structured data

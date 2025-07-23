@@ -38,7 +38,7 @@ buf --version
 
 #### 3. 🐘 SQLite (Local Database)
 
-If you're on a Mac (which you are if you work at Buf) you have SQLite3 installed. If you're on Windows, [here you go](https://www.sqlite.org/download.html). Make sure the SQLite3 binary (`sqlite`) is in your path.
+If you're on a Mac (which you are if you work at Buf) you have SQLite3 installed. If you're on Windows, [here you go](https://www.sqlite.org/download.html). Make sure the SQLite3 binary (`sqlite3`) is in your path.
 
 #### 4. ☁️ AWS CLI (For S3 Integration)
 ```bash
@@ -99,10 +99,10 @@ else
     echo "❌ NOT INSTALLED"
 fi
 
-# Check PostgreSQL
-echo -n "PostgreSQL: "
-if command -v psql &> /dev/null; then
-    psql --version
+# Check SQLite
+echo -n "SQLite: "
+if command -v sqlite3 &> /dev/null; then
+    sqlite3 -version
 else
     echo "❌ NOT INSTALLED"
 fi
@@ -117,7 +117,7 @@ fi
 
 # Test database connection
 echo -n "Database Connection: "
-if psql -d chinook -c "SELECT 1;" &> /dev/null; then
+if sqlite3 ../resources/chinook.db "SELECT 1;" &> /dev/null; then
     echo "✅ CONNECTED"
 else
     echo "❌ CANNOT CONNECT"
@@ -143,7 +143,7 @@ Create your workshop workspace:
 cd /Users/rob/@Sync/bufstuff/protobuf
 
 # Initialize Go module for the entire workshop
-go mod init github.com/chinook/workshop
+go mod init example.com/chinook/workshop
 
 # Create workspace structure
 mkdir -p {cmd,internal,pkg,data,scripts}
@@ -168,7 +168,7 @@ syntax = "proto3";
 
 package test.v1;
 
-option go_package = "github.com/chinook/workshop/internal/proto/test/v1;testv1";
+option go_package = "example.com/chinook/workshop/internal/proto/test/v1;testv1";
 
 message HelloRequest {
   string name = 1;
